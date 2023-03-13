@@ -1,18 +1,21 @@
-import { Provider } from 'react-redux';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './App';
+//import './styles/index.css';
+import {store} from './redux/store.js'
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
- 
-  <Provider>
-     <App />
-  </Provider>
-   
- 
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App state={store.getState()} />
+  </Provider>,
+  document.getElementById('root')
+
+
 );
+
 
 /*
 npx create-react-app .
