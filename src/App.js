@@ -1,10 +1,11 @@
+import Reg from './components/regLog/reg/Reg'
 
 
 function App(props) {
-  console.log(props);
+  
   return (
     <div>
-  HELLO
+  <Reg />
     </div>
   );
 }
